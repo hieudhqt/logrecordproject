@@ -2,7 +2,9 @@ package com.hieu.prm.logrecordproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.hieu.prm.logrecordproject.features.user.login.view.LoginFragment;
 
@@ -18,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
                     .add(R.id.container, new LoginFragment())
                     .commit();
         }
+    }
 
-        int i;
+    public void clickToLogin(View view) {
+        Intent intent = new Intent(this, MainNavigationActivity.class);
+        startActivity(intent);
     }
 }
