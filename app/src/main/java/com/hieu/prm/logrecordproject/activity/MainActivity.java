@@ -1,15 +1,13 @@
-package com.hieu.prm.logrecordproject;
+package com.hieu.prm.logrecordproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.google.android.material.textfield.TextInputEditText;
-import com.hieu.prm.logrecordproject.features.user.login.view.LoginFragment;
+import com.hieu.prm.logrecordproject.R;
+import com.hieu.prm.logrecordproject.fragment.LoginFragment;
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextInputEditText edtUsername, edtPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +19,5 @@ public class MainActivity extends AppCompatActivity {
                     .add(R.id.container, new LoginFragment())
                     .commit();
         }
-
-        edtUsername = findViewById(R.id.edittext_username);
-        edtPassword = findViewById(R.id.edittext_password);
-
     }
 }

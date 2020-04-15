@@ -1,4 +1,4 @@
-package com.hieu.prm.logrecordproject;
+package com.hieu.prm.logrecordproject.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -13,13 +13,14 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
-import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationInstanceFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.EmployeeFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.HomeFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.LogFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.ProfileFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.SettingsFragment;
+import com.hieu.prm.logrecordproject.R;
+import com.hieu.prm.logrecordproject.fragment.ApplicationFragment;
+import com.hieu.prm.logrecordproject.fragment.ApplicationInstanceFragment;
+import com.hieu.prm.logrecordproject.fragment.EmployeeFragment;
+import com.hieu.prm.logrecordproject.fragment.HomeFragment;
+import com.hieu.prm.logrecordproject.fragment.LogFragment;
+import com.hieu.prm.logrecordproject.fragment.ProfileFragment;
+import com.hieu.prm.logrecordproject.fragment.SettingsFragment;
 
 
 public class MainNavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {

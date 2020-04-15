@@ -1,6 +1,6 @@
 package com.hieu.prm.logrecordproject.utils;
 
-import com.hieu.prm.logrecordproject.api.Api;
+import com.hieu.prm.logrecordproject.service.AccountService;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String BASE_URL = "https://localhost:44362/";
+    private static final String BASE_URL = "http://192.168.2.143:45455/";
     private static RetrofitClient mInstance;
     private static Retrofit retrofit;
 
@@ -35,10 +35,7 @@ public class RetrofitClient {
         return mInstance;
     }
 
-    public Api getApi() {
-        return retrofit.create(Api.class);
+    public AccountService initAccountService() {
+        return retrofit.create(AccountService.class);
     }
-
-
-
 }

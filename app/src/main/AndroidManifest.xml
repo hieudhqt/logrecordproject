@@ -14,9 +14,9 @@
         android:theme="@style/Theme.LogRecord"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".MainNavigationActivity"
+            android:name=".activity.MainNavigationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

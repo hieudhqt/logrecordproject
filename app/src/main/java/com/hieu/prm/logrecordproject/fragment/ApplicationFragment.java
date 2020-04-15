@@ -1,4 +1,4 @@
-package com.hieu.prm.logrecordproject.features.user.login.view;
+package com.hieu.prm.logrecordproject.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
