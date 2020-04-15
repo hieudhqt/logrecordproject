@@ -15,7 +15,6 @@ import android.view.View;
 import com.google.android.material.navigation.NavigationView;
 import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationFragment;
 import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationInstanceFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.ChangePasswordActivity;
 import com.hieu.prm.logrecordproject.features.user.login.view.EmployeeFragment;
 import com.hieu.prm.logrecordproject.features.user.login.view.HomeFragment;
 import com.hieu.prm.logrecordproject.features.user.login.view.LogFragment;

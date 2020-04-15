@@ -1,4 +1,4 @@
-package com.hieu.prm.logrecordproject.features.user.login.view;
+package com.hieu.prm.logrecordproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

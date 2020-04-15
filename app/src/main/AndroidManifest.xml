@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LogRecord"
         android:usesCleartextTraffic="true">
-        <activity android:name=".features.user.login.view.ChangePasswordActivity"></activity>
+        <activity android:name=".activity.ChangePasswordActivity"></activity>
         <activity
             android:name=".activity.MainNavigationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
