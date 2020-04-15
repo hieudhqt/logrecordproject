@@ -7,4 +7,7 @@
     <string name="login_hint_password">Password</string>
     <string name="button_login_text">Login</string>
     <string name="button_cancel_text">Cancel</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="title">Log Exception Reports</string>
 </resources>
