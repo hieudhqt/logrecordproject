@@ -1,15 +1,19 @@
 package com.hieu.prm.logrecordproject.utils;
 
+import com.hieu.prm.logrecordproject.api.Api;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class NetworkClient {
+public class RetrofitClient {
 
-    private static final String BASE_URL = "";
+    private static final String BASE_URL = "https://localhost:44362/";
+    private static RetrofitClient mInstance;
+    private static Retrofit retrofit;
 
-    public static Retrofit getRetrofitClient() {
+    private RetrofitClient() {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -17,13 +21,24 @@ public class NetworkClient {
                 .addInterceptor(loggingInterceptor)
                 .build();
 
-        Retrofit retrofit = new Retrofit.Builder()
+        retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
-
-        return retrofit;
     }
+
+    public static synchronized RetrofitClient getInstance() {
+        if (mInstance == null){
+            mInstance = new RetrofitClient();
+        }
+        return mInstance;
+    }
+
+    public Api getApi() {
+        return retrofit.create(Api.class);
+    }
+
+
 
 }

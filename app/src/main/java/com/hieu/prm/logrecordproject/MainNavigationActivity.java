@@ -13,6 +13,13 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
+import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationInstanceFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.EmployeeFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.HomeFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.LogFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.ProfileFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.SettingsFragment;
 
 
 public class MainNavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -83,4 +90,5 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
         drawerLayout.closeDrawer(GravityCompat.START);
     }
+
 }

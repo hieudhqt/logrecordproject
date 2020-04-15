@@ -1,4 +1,4 @@
-package com.hieu.prm.logrecordproject;
+package com.hieu.prm.logrecordproject.features.user.login.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.hieu.prm.logrecordproject.R;
 
 public class ApplicationInstanceFragment extends Fragment {
 
