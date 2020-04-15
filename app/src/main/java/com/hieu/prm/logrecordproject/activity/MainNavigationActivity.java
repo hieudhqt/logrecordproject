@@ -1,4 +1,4 @@
-package com.hieu.prm.logrecordproject;
+package com.hieu.prm.logrecordproject.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;

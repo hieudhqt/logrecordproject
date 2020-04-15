@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".features.user.login.view.LoginFragment">
+    tools:context="com.hieu.prm.logrecordproject.activity.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -29,14 +29,14 @@
             style="@style/Widget.LogRecord.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/login_hint_username"
+            android:hint="@string/login_hint_email"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edittext_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textColor="#000000"/>
 

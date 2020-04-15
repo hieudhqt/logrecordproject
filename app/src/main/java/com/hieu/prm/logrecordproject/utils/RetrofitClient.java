@@ -1,6 +1,6 @@
 package com.hieu.prm.logrecordproject.utils;
 
-import com.hieu.prm.logrecordproject.api.Api;
+import com.hieu.prm.logrecordproject.service.AccountService;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -35,8 +35,8 @@ public class RetrofitClient {
         return mInstance;
     }
 
-    public Api getApi() {
-        return retrofit.create(Api.class);
+    public AccountService initAccountService() {
+        return retrofit.create(AccountService.class);
     }
 
 
