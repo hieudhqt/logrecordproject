@@ -13,14 +13,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
-import com.hieu.prm.logrecordproject.R;
-import com.hieu.prm.logrecordproject.fragment.ApplicationFragment;
-import com.hieu.prm.logrecordproject.fragment.ApplicationInstanceFragment;
-import com.hieu.prm.logrecordproject.fragment.EmployeeFragment;
-import com.hieu.prm.logrecordproject.fragment.HomeFragment;
-import com.hieu.prm.logrecordproject.fragment.LogFragment;
-import com.hieu.prm.logrecordproject.fragment.ProfileFragment;
-import com.hieu.prm.logrecordproject.fragment.SettingsFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationInstanceFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.EmployeeFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.HomeFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.LogFragment;
+import com.hieu.prm.logrecordproject.features.user.login.view.ProfileFragment;
 
 
 public class MainNavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,6 +26,7 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +74,11 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
             case R.id.menu_log:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LogFragment()).commit();
                 break;
-            case R.id.menu_settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+            case R.id.menu_change_password:
+                intent = new Intent(this, ChangePasswordActivity.class);
                 break;
             case R.id.menu_logout:
-                Intent intent = new Intent(this, MainActivity.class);
+                intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
         }
