@@ -1,5 +1,7 @@
 package com.hieu.prm.logrecordproject.fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,9 +14,14 @@ import android.view.ViewGroup;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.hieu.prm.logrecordproject.R;
+import com.hieu.prm.logrecordproject.presenter.LoginPresenter;
+import com.hieu.prm.logrecordproject.repository.AccountRepository;
+import com.hieu.prm.logrecordproject.repository.AccountRepositoryImpl;
 import com.hieu.prm.logrecordproject.request.LoginRequest;
 import com.hieu.prm.logrecordproject.response.LoginResponse;
+import com.hieu.prm.logrecordproject.utils.CallBackData;
 import com.hieu.prm.logrecordproject.utils.RetrofitClient;
+import com.hieu.prm.logrecordproject.view.LoginView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +32,7 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment implements LoginView {
 
     @BindView(R.id.button_next)
     MaterialButton btnLogin;
@@ -33,6 +40,8 @@ public class LoginFragment extends Fragment {
     TextInputEditText edtUsername;
     @BindView(R.id.edittext_password)
     TextInputEditText edtPassword;
+
+    private LoginPresenter loginPresenter;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -45,13 +54,13 @@ public class LoginFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         ButterKnife.bind(this, view);
 
+        loginPresenter = new LoginPresenter(view.getContext(), this);
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = edtUsername.getText().toString();
                 String password = edtPassword.getText().toString().trim();
-                Log.d("FIELD", email);
-                Log.d("FIELD", password);
                 if (email.isEmpty()) {
                     edtUsername.setError("Email is required");
                     edtUsername.requestFocus();
@@ -68,22 +77,21 @@ public class LoginFragment extends Fragment {
                     return;
                 }
 
-                LoginRequest loginRequest = new LoginRequest(email, password);
+                loginPresenter.login(email, password);
 
-                Call<LoginResponse> call = RetrofitClient
-                        .getInstance()
-                        .initAccountService()
-                        .userLogin(loginRequest);
-                call.enqueue(new Callback<LoginResponse>() {
-                    @Override
-                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                    }
-                    @Override
-                    public void onFailure(Call<LoginResponse> call, Throwable t) {
-                    }
-                });
             }
         });
         return view;
+    }
+
+    @Override
+    public void onLoginSuccess() {
+        SharedPreferences sharedPreferences = getActivity().getApplicationContext().getSharedPreferences(getActivity().getApplicationContext().getPackageName(), Context.MODE_PRIVATE);
+        String token = sharedPreferences.getString("TOKEN", "");
+    }
+
+    @Override
+    public void onLoginFail(String message) {
+
     }
 }
