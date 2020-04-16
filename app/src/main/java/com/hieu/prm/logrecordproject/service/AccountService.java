@@ -18,4 +18,5 @@ public interface AccountService {
 
     @GET("api/accounts")
     Call<List<AccountResponse>> getAllAccounts();
+
 }

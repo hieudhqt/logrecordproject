@@ -178,6 +178,9 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/linlay1">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -297,8 +300,7 @@
                     android:layout_marginTop="15dp"
                     android:background="@color/grey" />
             </LinearLayout>
-
-
         </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 </RelativeLayout>
