@@ -61,28 +61,36 @@ public class LoginFragment extends Fragment implements LoginView {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = edtUsername.getText().toString();
-                String password = edtPassword.getText().toString().trim();
-                if (email.isEmpty()) {
-                    edtUsername.setError("Email is required");
-                    edtUsername.requestFocus();
-                    return;
-                }
-                if (password.isEmpty()) {
-                    edtPassword.setError("Password required");
-                    edtPassword.requestFocus();
-                    return;
-                }
-                if (password.length() < 4) {
-                    edtPassword.setError("Password should be at least 4 characters long");
-                    edtPassword.requestFocus();
-                    return;
-                }
-
-                loginPresenter.login(email, password);
-
+                Intent intent = new Intent(view.getContext(), MainNavigationActivity.class);
+                startActivity(intent);
             }
         });
+
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String email = edtUsername.getText().toString();
+//                String password = edtPassword.getText().toString().trim();
+//                if (email.isEmpty()) {
+//                    edtUsername.setError("Email is required");
+//                    edtUsername.requestFocus();
+//                    return;
+//                }
+//                if (password.isEmpty()) {
+//                    edtPassword.setError("Password required");
+//                    edtPassword.requestFocus();
+//                    return;
+//                }
+//                if (password.length() < 4) {
+//                    edtPassword.setError("Password should be at least 4 characters long");
+//                    edtPassword.requestFocus();
+//                    return;
+//                }
+//
+//                loginPresenter.login(email, password);
+//
+//            }
+//        });
         return view;
     }
 

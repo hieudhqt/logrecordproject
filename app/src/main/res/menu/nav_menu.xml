@@ -3,10 +3,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/menu_home"
-            android:icon="@drawable/ic_home_black_24dp"
-            android:title="Dashboard" />
-        <item
             android:id="@+id/menu_application"
             android:icon="@drawable/ic_widgets_black_24dp"
             android:title="Applications" />
@@ -26,10 +22,6 @@
 
     <item android:title="Configuration">
         <menu>
-            <item
-                android:id="@+id/menu_change_password"
-                android:icon="@drawable/ic_settings_black_24dp"
-                android:title="Change password"/>
             <item
                 android:id="@+id/menu_logout"
                 android:icon="@drawable/ic_input_black_24dp"

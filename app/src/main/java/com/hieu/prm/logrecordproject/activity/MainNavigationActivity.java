@@ -18,10 +18,8 @@ import com.hieu.prm.logrecordproject.R;
 import com.hieu.prm.logrecordproject.fragment.ApplicationFragment;
 import com.hieu.prm.logrecordproject.fragment.ApplicationInstanceFragment;
 import com.hieu.prm.logrecordproject.fragment.EmployeeFragment;
-import com.hieu.prm.logrecordproject.fragment.HomeFragment;
 import com.hieu.prm.logrecordproject.fragment.LogFragment;
 import com.hieu.prm.logrecordproject.fragment.ProfileFragment;
-import com.hieu.prm.logrecordproject.response.AccountResponse;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,21 +47,21 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        View headerView = navigationView.getHeaderView(0);
-        HeaderViewHolder headerViewHolder = new HeaderViewHolder(headerView);
+//        View headerView = navigationView.getHeaderView(0);
+//        HeaderViewHolder headerViewHolder = new HeaderViewHolder(headerView);
 
-        intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        AccountResponse accountResponse = (AccountResponse) bundle.getSerializable("ACCOUNT");
-        headerViewHolder.headerName.setText(accountResponse.getName());
-        headerViewHolder.headerEmail.setText(accountResponse.getEmail());
+//        intent = getIntent();
+//        Bundle bundle = intent.getExtras();
+//        AccountResponse accountResponse = (AccountResponse) bundle.getSerializable("ACCOUNT");
+//        headerViewHolder.headerName.setText(accountResponse.getName());
+//        headerViewHolder.headerEmail.setText(accountResponse.getEmail());
 
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.setDrawerIndicatorEnabled(true);
         toggle.syncState();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ApplicationFragment()).commit();
     }
 
     @Override
@@ -78,9 +76,6 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-                break;
             case R.id.menu_application:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ApplicationFragment()).commit();
                 break;
@@ -92,9 +87,6 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
                 break;
             case R.id.menu_log:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LogFragment()).commit();
-                break;
-            case R.id.menu_change_password:
-                intent = new Intent(this, ChangePasswordActivity.class);
                 break;
             case R.id.menu_logout:
                 intent = new Intent(this, MainActivity.class);
