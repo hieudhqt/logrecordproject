@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/grad"
     android:orientation="vertical"
     tools:context="com.hieu.prm.logrecordproject.activity.MainActivity">
 
     <TextView
-        android:background="@drawable/grad"
+        android:id="@+id/txt_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="@string/title"
+        android:layout_above="@+id/field_login"
         android:gravity="center"
-        android:padding="20dp"
-        android:textStyle="bold"/>
+        android:padding="10dp"
+        android:text="@string/title"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
     <LinearLayout
+        android:id="@+id/field_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:orientation="vertical"
@@ -31,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/login_hint_email"
+            android:textColorHint="@color/white"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -39,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:textColor="#000000"/>
+                android:textColor="#000000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/login_hint_password"
+            android:textColorHint="@color/white"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -57,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:textColor="#000000"/>
+                android:textColor="#000000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,17 +79,8 @@
                 android:layout_alignParentEnd="true"
                 android:text="@string/button_login_text" />
 
-            <Button
-                android:id="@+id/button_register"
-                style="@style/Widget.LogRecord.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_toStartOf="@id/button_next"
-                android:text="Create new account"/>
-
         </RelativeLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

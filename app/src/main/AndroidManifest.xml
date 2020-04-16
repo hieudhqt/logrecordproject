@@ -13,8 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LogRecord"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RegistrationActivity"></activity>
-        <activity android:name=".activity.ChangePasswordActivity" />
+        <activity android:name=".activity.SplashActivity">
+
+        </activity>
         <activity
             android:name=".activity.MainNavigationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
