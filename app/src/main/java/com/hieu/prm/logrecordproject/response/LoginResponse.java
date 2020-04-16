@@ -2,12 +2,13 @@ package com.hieu.prm.logrecordproject.response;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 import lombok.Data;
 
 @Data
-public class LoginResponse {
+public class LoginResponse implements Serializable {
 
     @SerializedName("id")
     private int id;
