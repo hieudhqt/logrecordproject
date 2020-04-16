@@ -1,33 +1,29 @@
 package com.hieu.prm.logrecordproject.fragment;
 
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.hieu.prm.logrecordproject.R;
+import com.hieu.prm.logrecordproject.activity.MainNavigationActivity;
 import com.hieu.prm.logrecordproject.presenter.LoginPresenter;
-import com.hieu.prm.logrecordproject.repository.AccountRepository;
-import com.hieu.prm.logrecordproject.repository.AccountRepositoryImpl;
-import com.hieu.prm.logrecordproject.request.LoginRequest;
+import com.hieu.prm.logrecordproject.response.AccountResponse;
 import com.hieu.prm.logrecordproject.response.LoginResponse;
-import com.hieu.prm.logrecordproject.utils.CallBackData;
-import com.hieu.prm.logrecordproject.utils.RetrofitClient;
 import com.hieu.prm.logrecordproject.view.LoginView;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,6 +37,12 @@ public class LoginFragment extends Fragment implements LoginView {
     @BindView(R.id.edittext_password)
     TextInputEditText edtPassword;
 
+    private Unbinder unbinder;
+
+    View view;
+
+    LoginResponse loginResponse;
+
     private LoginPresenter loginPresenter;
 
     public LoginFragment() {
@@ -51,8 +53,8 @@ public class LoginFragment extends Fragment implements LoginView {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_login, container, false);
-        ButterKnife.bind(this, view);
+        view = inflater.inflate(R.layout.fragment_login, container, false);
+        unbinder = ButterKnife.bind(this, view);
 
         loginPresenter = new LoginPresenter(view.getContext(), this);
 
@@ -85,13 +87,45 @@ public class LoginFragment extends Fragment implements LoginView {
     }
 
     @Override
-    public void onLoginSuccess() {
-        SharedPreferences sharedPreferences = getActivity().getApplicationContext().getSharedPreferences(getActivity().getApplicationContext().getPackageName(), Context.MODE_PRIVATE);
-        String token = sharedPreferences.getString("TOKEN", "");
+    public void onLoginSuccess(LoginResponse loginResponse) {
+        this.loginResponse = loginResponse;
+        loginPresenter.getAllAccounts();
     }
 
     @Override
     public void onLoginFail(String message) {
+        Toast.makeText(view.getContext(), "Incorrect username/password", Toast.LENGTH_LONG).show();
+        Log.d("LOGIN_FAIL", message);
+    }
 
+    @Override
+    public void onGetAccountsSuccess(List<AccountResponse> accountResponseList) {
+        int id = this.loginResponse.getId();
+        AccountResponse foundAccount = null;
+        for (AccountResponse accountResponse : accountResponseList) {
+            if (accountResponse.getId() == id) {
+                foundAccount = accountResponse;
+            }
+        }
+
+        if (foundAccount != null) {
+            Intent intent = new Intent(view.getContext(), MainNavigationActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("ACCOUNT", foundAccount);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    public void onGetAccountsFail(String message) {
+        Toast.makeText(view.getContext(), "Get User Information Fail", Toast.LENGTH_LONG).show();
+        Log.d("GET_ACCOUNT_ERROR", message);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 }
