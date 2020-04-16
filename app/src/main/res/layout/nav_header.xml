@@ -10,10 +10,10 @@
 
     <ImageView
         android:id="@+id/img_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round"
-        android:onClick="clickToMoveToProfile"/>
+        android:layout_width="91dp"
+        android:layout_height="86dp"
+        android:onClick="clickToMoveToProfile"
+        android:src="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:layout_width="wrap_content"
