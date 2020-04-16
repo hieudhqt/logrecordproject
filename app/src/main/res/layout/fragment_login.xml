@@ -73,7 +73,7 @@
                 android:text="@string/button_login_text" />
 
             <Button
-                android:id="@+id/button_cancel"
+                android:id="@+id/button_register"
                 style="@style/Widget.LogRecord.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -13,12 +13,13 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
-import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.ApplicationInstanceFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.EmployeeFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.HomeFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.LogFragment;
-import com.hieu.prm.logrecordproject.features.user.login.view.ProfileFragment;
+import com.hieu.prm.logrecordproject.R;
+import com.hieu.prm.logrecordproject.fragment.ApplicationFragment;
+import com.hieu.prm.logrecordproject.fragment.ApplicationInstanceFragment;
+import com.hieu.prm.logrecordproject.fragment.EmployeeFragment;
+import com.hieu.prm.logrecordproject.fragment.HomeFragment;
+import com.hieu.prm.logrecordproject.fragment.LogFragment;
+import com.hieu.prm.logrecordproject.fragment.ProfileFragment;
 
 
 public class MainNavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
