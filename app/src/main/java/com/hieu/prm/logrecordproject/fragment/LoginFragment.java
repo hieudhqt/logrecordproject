@@ -12,11 +12,13 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.gson.Gson;
 import com.hieu.prm.logrecordproject.R;
 import com.hieu.prm.logrecordproject.activity.MainNavigationActivity;
 import com.hieu.prm.logrecordproject.presenter.LoginPresenter;
 import com.hieu.prm.logrecordproject.response.AccountResponse;
 import com.hieu.prm.logrecordproject.response.LoginResponse;
+import com.hieu.prm.logrecordproject.utils.SharedPreferencesUtils;
 import com.hieu.prm.logrecordproject.view.LoginView;
 
 import java.util.List;
@@ -66,31 +68,31 @@ public class LoginFragment extends Fragment implements LoginView {
             }
         });
 
-//        btnLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String email = edtUsername.getText().toString();
-//                String password = edtPassword.getText().toString().trim();
-//                if (email.isEmpty()) {
-//                    edtUsername.setError("Email is required");
-//                    edtUsername.requestFocus();
-//                    return;
-//                }
-//                if (password.isEmpty()) {
-//                    edtPassword.setError("Password required");
-//                    edtPassword.requestFocus();
-//                    return;
-//                }
-//                if (password.length() < 4) {
-//                    edtPassword.setError("Password should be at least 4 characters long");
-//                    edtPassword.requestFocus();
-//                    return;
-//                }
-//
-//                loginPresenter.login(email, password);
-//
-//            }
-//        });
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = edtUsername.getText().toString();
+                String password = edtPassword.getText().toString().trim();
+                if (email.isEmpty()) {
+                    edtUsername.setError("Email is required");
+                    edtUsername.requestFocus();
+                    return;
+                }
+                if (password.isEmpty()) {
+                    edtPassword.setError("Password required");
+                    edtPassword.requestFocus();
+                    return;
+                }
+                if (password.length() < 4) {
+                    edtPassword.setError("Password should be at least 4 characters long");
+                    edtPassword.requestFocus();
+                    return;
+                }
+
+                loginPresenter.login(email, password);
+
+            }
+        });
         return view;
     }
 
@@ -117,11 +119,19 @@ public class LoginFragment extends Fragment implements LoginView {
         }
 
         if (foundAccount != null) {
-            Intent intent = new Intent(view.getContext(), MainNavigationActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putSerializable("ACCOUNT", foundAccount);
-            intent.putExtras(bundle);
-            startActivity(intent);
+            if (foundAccount.getRole() != 3 && foundAccount.getRole() != 4) {
+                Gson gson = new Gson();
+                String jsonAccount = gson.toJson(foundAccount);
+                String jsonAccountList = gson.toJson(accountResponseList);
+                SharedPreferencesUtils.saveString(view.getContext(), SharedPreferencesUtils.ACCOUNT, jsonAccount);
+                SharedPreferencesUtils.saveString(view.getContext(), SharedPreferencesUtils.ACCOUNT_LIST, jsonAccountList);
+                Intent intent = new Intent(view.getContext(), MainNavigationActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            } else {
+                Toast.makeText(view.getContext(), "Your account is not authorized", Toast.LENGTH_LONG).show();
+                Log.d("UNAUTHORIZED_ERROR", foundAccount.getEmail() + " forbidden");
+            }
         }
     }
 

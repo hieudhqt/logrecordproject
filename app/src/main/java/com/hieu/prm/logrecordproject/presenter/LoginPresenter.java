@@ -30,7 +30,6 @@ public class LoginPresenter {
         accountRepository.getLoginResponse(email, password, new CallBackData<LoginResponse>() {
             @Override
             public void onSuccess(LoginResponse type) {
-                SharedPreferencesUtils.saveString(mContext, SharedPreferencesUtils.EMAIL, type.getEmail());
                 SharedPreferencesUtils.saveString(mContext, SharedPreferencesUtils.ACCESS_TOKEN, type.getToken());
                 SharedPreferencesUtils.saveBoolean(mContext, SharedPreferencesUtils.IS_LOGIN, true);
 

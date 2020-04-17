@@ -3,6 +3,9 @@ package com.hieu.prm.logrecordproject.utils;
 import android.content.Context;
 
 import com.hieu.prm.logrecordproject.service.AccountService;
+import com.hieu.prm.logrecordproject.service.ApplicationInstanceService;
+import com.hieu.prm.logrecordproject.service.ApplicationService;
+import com.hieu.prm.logrecordproject.service.LogService;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -18,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String BASE_URL = "https://192.168.3.123:45455/";
+    private static final String BASE_URL = "http://192.168.2.143:45455/";
     private static RetrofitClient mInstance;
     private static Retrofit retrofit;
 
@@ -34,6 +37,18 @@ public class RetrofitClient {
 
     public AccountService initAccountService() {
         return retrofit.create(AccountService.class);
+    }
+
+    public ApplicationService initApplicationService() {
+        return retrofit.create(ApplicationService.class);
+    }
+
+    public ApplicationInstanceService initApplicationInstanceSerivce() {
+        return retrofit.create(ApplicationInstanceService.class);
+    }
+
+    public LogService initLogService() {
+        return retrofit.create(LogService.class);
     }
 
     public RetrofitClient initRetrofit() {

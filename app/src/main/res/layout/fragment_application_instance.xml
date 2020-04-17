@@ -33,20 +33,22 @@
             <TableRow>
 
                 <TextView
-                    android:layout_width="42dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Application"
-                    android:textStyle="bold" />
+                    android:text="App code"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Instance"
-                    android:textStyle="bold" />
+                    android:text="Instance name"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -54,34 +56,10 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Status"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
             </TableRow>
 
-            <TableRow>
-                <TextView
-                    android:id="@+id/txt_application_name"
-                    android:layout_width="42dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Application"/>
-
-                <TextView
-                    android:id="@+id/txt_instance_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Instance" />
-
-                <TextView
-                    android:id="@+id/txt_status1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Status" />
-            </TableRow>
         </TableLayout>
     </LinearLayout>
 </RelativeLayout>

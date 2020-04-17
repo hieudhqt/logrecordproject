@@ -28,7 +28,6 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_launcher_foreground" />
 
-
         </RelativeLayout>
 
         <TextView

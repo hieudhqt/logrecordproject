@@ -8,18 +8,23 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.Gson;
 import com.hieu.prm.logrecordproject.R;
 import com.hieu.prm.logrecordproject.fragment.ApplicationFragment;
 import com.hieu.prm.logrecordproject.fragment.ApplicationInstanceFragment;
 import com.hieu.prm.logrecordproject.fragment.EmployeeFragment;
 import com.hieu.prm.logrecordproject.fragment.LogFragment;
 import com.hieu.prm.logrecordproject.fragment.ProfileFragment;
+import com.hieu.prm.logrecordproject.response.AccountResponse;
+import com.hieu.prm.logrecordproject.utils.SharedPreferencesUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,14 +52,17 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
 
         navigationView.setNavigationItemSelectedListener(this);
 
-//        View headerView = navigationView.getHeaderView(0);
-//        HeaderViewHolder headerViewHolder = new HeaderViewHolder(headerView);
+        View headerView = navigationView.getHeaderView(0);
+        HeaderViewHolder headerViewHolder = new HeaderViewHolder(headerView);
 
-//        intent = getIntent();
-//        Bundle bundle = intent.getExtras();
-//        AccountResponse accountResponse = (AccountResponse) bundle.getSerializable("ACCOUNT");
-//        headerViewHolder.headerName.setText(accountResponse.getName());
-//        headerViewHolder.headerEmail.setText(accountResponse.getEmail());
+        SharedPreferences preferences = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        if (preferences.contains(SharedPreferencesUtils.ACCOUNT)) {
+            String json = SharedPreferencesUtils.getString(this, SharedPreferencesUtils.ACCOUNT);
+            Gson gson = new Gson();
+            AccountResponse accountResponse = gson.fromJson(json, AccountResponse.class);
+            headerViewHolder.headerName.setText(accountResponse.getName());
+            headerViewHolder.headerEmail.setText(accountResponse.getEmail());
+        }
 
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(toggle);
@@ -62,6 +70,7 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
         toggle.syncState();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ApplicationFragment()).commit();
+        navigationView.setCheckedItem(R.id.menu_application);
     }
 
     @Override
@@ -89,8 +98,7 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LogFragment()).commit();
                 break;
             case R.id.menu_logout:
-                intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
+                logout();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -112,6 +120,18 @@ public class MainNavigationActivity extends AppCompatActivity implements Navigat
         HeaderViewHolder(View view) {
             ButterKnife.bind(this, view);
         }
+    }
+
+    private void logout() {
+        SharedPreferences preferences = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        Editor editor = preferences.edit();
+        editor.clear();
+        editor.commit();
+        Intent intent = new Intent(this, MainActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
 }

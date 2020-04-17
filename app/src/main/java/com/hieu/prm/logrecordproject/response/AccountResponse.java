@@ -43,6 +43,18 @@ public class AccountResponse implements Serializable {
     private String aspNetUser;
 
     @SerializedName("manage_project")
-    private List<ProjectResponse> manageProjects;
+    private List<String> manageProjects;
+
+    public String getAccountInfo() {
+        return "ID: " + this.id + "\n" +
+                "Name: " + this.name + "\n" +
+                "Status: " + this.active + "\n" +
+                "Address: " + this.address + "\n" +
+                "ASP .Net UserID: " + this.aspNetUserId + "\n" +
+                "ASP .Net User: " + this.aspNetUser + "\n" +
+                "Email: " + this.email + "\n" +
+                "Phone: " + this.phone + "\n" +
+                "Role: " + this.role + "\n";
+    }
 
 }

@@ -23,5 +23,5 @@ public class LoginResponse implements Serializable {
     private String email;
 
     @SerializedName("manage_project")
-    private List<ProjectResponse> manageProject;
+    private List<String> manageProject;
 }
