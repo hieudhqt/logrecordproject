@@ -3,22 +3,26 @@
     <!-- Base application theme. -->
     <style name="Theme.LogRecord" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:statusBarColor">@color/gradEnd</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
     </style>
 
     <!-- TextInputLayout styles -->
     <style name="TextAppearance.LogRecord.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="Widget.LogRecord.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="hintTextAppearance">@style/TextAppearance.LogRecord.TextInputLayout.HintText</item>
-        <item name="hintTextColor">@color/textColorPrimary</item>
+        <item name="hintTextColor">@color/white</item>
         <item name="android:paddingBottom">8dp</item>
-        <item name="boxStrokeColor">?attr/colorPrimaryDark</item>
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxStrokeWidth">2dp</item>
     </style>
 
     <!-- Button styles -->
@@ -28,7 +32,7 @@
     </style>
 
     <style name="Widget.LogRecord.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
 </resources>

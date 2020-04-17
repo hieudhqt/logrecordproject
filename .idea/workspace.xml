@@ -5,15 +5,75 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="okhttp" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="968a5305-07ae-4e64-9f36-c33d5cb7eeb1" name="Default Changelist" comment="" />
+    <list default="true" id="968a5305-07ae-4e64-9f36-c33d5cb7eeb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/InformationDetailFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/presenter/ApplicationInstancePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/presenter/ApplicationPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/presenter/LogPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/repository/ApplicationInstanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/repository/ApplicationInstanceRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/repository/ApplicationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/repository/ApplicationRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/repository/LogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/repository/LogRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/ApplicationInstanceResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/view/ApplicationInstanceView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/view/ApplicationView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/view/LogView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_percentlayout_percentlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_percentlayout_percentlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/activity/MainNavigationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/activity/MainNavigationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/activity/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/activity/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/ApplicationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/ApplicationFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/ApplicationInstanceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/ApplicationInstanceFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/EmployeeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/EmployeeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/LogFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/LogFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/LoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/LoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/fragment/ProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/presenter/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/presenter/LoginPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/AccountResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/AccountResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/ApplicationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/ApplicationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/ProjectResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/response/LogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/service/ApplicationInstanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/service/ApplicationInstanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/service/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/service/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/service/LogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/utils/RetrofitClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/utils/RetrofitClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/utils/SharedPreferencesUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hieu/prm/logrecordproject/utils/SharedPreferencesUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_application.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_application_instance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_application_instance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_employee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_employee.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_log.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_log.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_R" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="ce0216026810a33402" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -29,25 +89,53 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Hieu Hoang Le &lt;hieudhqt@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="ProjectId" id="1ZlMcyqpliWizg6mVLcYuobv0HL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_29" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-16T06:01:22.780Z" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\minhc\Desktop\Mobile\logrecordproject\app\src\main\res\drawable-v24" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.hieu.prm.logrecordproject.activity" />
+      <recent name="com.hieu.prm.logrecordproject.fragment" />
       <recent name="com.hieu.prm.logrecordproject.features.user.login.view" />
       <recent name="com.hieu.prm.logrecordproject.ui.login" />
       <recent name="com.hieu.prm.logrecordproject.ui" />
+    </key>
+    <key name="android.template.packageName">
+      <recent name="com.hieu.prm.logrecordproject" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hieu.prm.logrecordproject.repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\minhc\Desktop\Mobile\logrecordproject\app\src\main\res\drawable-v24" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -133,6 +221,42 @@
       <option name="presentableId" value="Default" />
       <updated>1585409310573</updated>
     </task>
+    <task id="LOCAL-00001" summary="testing">
+      <created>1586321882434</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586321882434</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Main layout for app">
+      <created>1586598214611</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586598214611</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refactor Project">
+      <created>1586964016304</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586964016304</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/Minh' into Hieu&#10;&#10;# Conflicts:&#10;#&#9;.gradle/5.6.4/fileHashes/fileHashes.lock&#10;#&#9;.idea/caches/build_file_checksums.ser&#10;#&#9;.idea/workspace.xml">
+      <created>1586969071494</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586969071494</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add service">
+      <created>1587030341033</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587030341033</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,10 +264,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="testing" />
+    <MESSAGE value="Main layout for app" />
+    <MESSAGE value="Refactor Project" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Minh' into Hieu&#10;&#10;# Conflicts:&#10;#&#9;.gradle/5.6.4/fileHashes/fileHashes.lock&#10;#&#9;.idea/caches/build_file_checksums.ser&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Add service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add service" />
   </component>
 </project>

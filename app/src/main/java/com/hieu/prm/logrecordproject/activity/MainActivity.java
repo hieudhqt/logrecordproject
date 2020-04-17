@@ -1,10 +1,11 @@
-package com.hieu.prm.logrecordproject;
+package com.hieu.prm.logrecordproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.hieu.prm.logrecordproject.features.user.login.view.LoginFragment;
+import com.hieu.prm.logrecordproject.R;
+import com.hieu.prm.logrecordproject.fragment.LoginFragment;
 
 public class MainActivity extends AppCompatActivity {
 

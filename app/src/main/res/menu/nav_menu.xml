@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_application"
+            android:icon="@drawable/ic_widgets_black_24dp"
+            android:title="Applications" />
+        <item
+            android:id="@+id/menu_application_instance"
+            android:icon="@drawable/ic_view_carousel_black_24dp"
+            android:title="Application Instances" />
+        <item
+            android:id="@+id/menu_employee"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="Employees" />
+        <item
+            android:id="@+id/menu_log"
+            android:icon="@drawable/ic_av_timer_black_24dp"
+            android:title="Logs" />
+    </group>
+
+    <item android:title="Configuration">
+        <menu>
+            <item
+                android:id="@+id/menu_logout"
+                android:icon="@drawable/ic_input_black_24dp"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>
