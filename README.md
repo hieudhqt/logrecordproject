@@ -1,5 +1,5 @@
 # Introduction
-Log Record Report Android Project based on UniLogAPI
+Simple Log Record Report Android Project based on UniLogAPI
 
 # Specification
 ## Android application
